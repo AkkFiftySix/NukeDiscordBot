@@ -16,6 +16,7 @@ public static class ServiceCollectionExtensions
         var configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false)
+            .AddEnvironmentVariables()
             .Build();
 
         serviceCollection
